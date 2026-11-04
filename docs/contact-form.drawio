@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="ページ-1" id="66_C_n9oC0wcO_btp7wp">
+    <mxGraphModel dx="1030" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OycUed173szZVPLKZytV-6" edge="1" parent="1" source="OycUed173szZVPLKZytV-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;exitX=0.198;exitY=1.035;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.202;entryY=0.005;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;" target="OycUed173szZVPLKZytV-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-7" connectable="0" parent="OycUed173szZVPLKZytV-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="1人のユーザーは複数の&lt;div&gt;問い合わせができる&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.3171" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;user&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="220" x="80" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-16" edge="1" parent="1" source="OycUed173szZVPLKZytV-2" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.995;entryY=0.385;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;" target="OycUed173szZVPLKZytV-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-17" connectable="0" parent="OycUed173szZVPLKZytV-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="１つのカテゴリに&lt;div&gt;複数の問い合わせが属する&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.2496" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;category&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="220" x="550" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-18" edge="1" parent="1" source="OycUed173szZVPLKZytV-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;exitX=0;exitY=0.625;exitDx=0;exitDy=0;exitPerimeter=0;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;" target="OycUed173szZVPLKZytV-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="130" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-19" connectable="0" parent="OycUed173szZVPLKZytV-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="１つのタグは&lt;div&gt;複数の問い合わせに付けられる&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.201" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;tag&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="220" x="560" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-5" edge="1" parent="1" source="OycUed173szZVPLKZytV-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;exitX=0.787;exitY=-0.035;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.795;entryY=0.995;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=ERmandOne;startFill=0;endArrow=ERmandOne;endFill=0;" target="OycUed173szZVPLKZytV-1">
+          <mxGeometry relative="1" x="0.2737" as="geometry" />
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-8" connectable="0" parent="OycUed173szZVPLKZytV-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="１つの問い合わせは&lt;div&gt;１人の&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;ユーザーに紐づく&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0632" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-12" edge="1" parent="1" source="OycUed173szZVPLKZytV-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;exitX=1;exitY=0.75;exitDx=0;exitDy=0;startArrow=ERmandOne;startFill=0;endArrow=ERmandOne;endFill=0;" target="OycUed173szZVPLKZytV-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-13" connectable="0" parent="OycUed173szZVPLKZytV-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="１つの問い合わせは&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;１つの&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;カテゴリに属する&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1523" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-14" edge="1" parent="1" source="OycUed173szZVPLKZytV-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;startArrow=ERmandOne;startFill=0;endArrow=ERzeroToMany;endFill=0;exitX=1.016;exitY=0.165;exitDx=0;exitDy=0;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="350" as="sourcePoint" />
+            <mxPoint x="640" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-15" connectable="0" parent="OycUed173szZVPLKZytV-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="１つの問い合わせは&lt;div&gt;複数の&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;タグを持てる&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0994" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OycUed173szZVPLKZytV-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;contact&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="220" x="80" y="340" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
