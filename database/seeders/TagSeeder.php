@@ -2,10 +2,8 @@
 
 namespace Database\Seeders;
 
-
-use Illuminate\Database\Seeder;
 use App\Models\Tag;
-
+use Illuminate\Database\Seeder;
 
 class TagSeeder extends Seeder
 {
@@ -14,7 +12,7 @@ class TagSeeder extends Seeder
      */
     public function run(): void
     {
-        //投入する固定のタグ候補リスト
+        // 投入する固定のタグ候補リスト
         $tags = [
             ['name' => '質問'],
             ['name' => '要望'],

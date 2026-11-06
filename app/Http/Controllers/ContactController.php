@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
 use App\Models\Category;
 use App\Models\Tag;
-use App\Models\Contact;
-use Illuminate\Http\Request;
-use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller
 {
@@ -20,16 +16,15 @@ class ContactController extends Controller
         $categories = Category::all();
         $tags = Tag::all();
 
-        //取得したデータを入力画面のビューに渡す
+        // 取得したデータを入力画面のビューに渡す
         return view('contact.index', compact('categories', 'tags'));
 
     }
-  
+
     public function create()
     {
-    //FormRequestで検証済みのデータを取得
-$validated = $request->validated();
-// 確認画面で入力されたデータを表示するために、セッションに保存
+        // FormRequestで検証済みのデータを取得
+        $validated = $request->validated();
+        // 確認画面で入力されたデータを表示するために、セッションに保存
     }
-
 }

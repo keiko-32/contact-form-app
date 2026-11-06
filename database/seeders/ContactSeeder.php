@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
-use Faker\Factory;
-use App\Models\Tag;
-use App\Models\Contact;
 use App\Models\Category;
+use App\Models\Contact;
+use App\Models\Tag;
+use Faker\Factory;
+use Illuminate\Database\Seeder;
 
 class ContactSeeder extends Seeder
 {
@@ -30,8 +30,7 @@ class ContactSeeder extends Seeder
             $contact->tags()->attach($randomTagIds);
         });
 
-
-        //日本語のFakerインスタンスを生成
+        // 日本語のFakerインスタンスを生成
         $faker = Factory::create('ja_JP');
 
         // ビル・マンション名のダミー配列

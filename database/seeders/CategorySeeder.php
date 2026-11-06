@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\Category;
+use Illuminate\Database\Seeder;
 
 class CategorySeeder extends Seeder
 {
@@ -12,13 +12,13 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        //投入する固定のカテゴリ候補リスト
+        // 投入する固定のカテゴリ候補リスト
         $categories = [
-            ['content'=>'商品のお届けについて'],
-            ['content'=>'商品の交換について'],
-            ['content'=>'商品トラブル'],
-            ['content'=>'ショップへのお問い合わせ'],
-            ['content'=>'その他'],
+            ['content' => '商品のお届けについて'],
+            ['content' => '商品の交換について'],
+            ['content' => '商品トラブル'],
+            ['content' => 'ショップへのお問い合わせ'],
+            ['content' => 'その他'],
         ];
 
         foreach ($categories as $category) {
