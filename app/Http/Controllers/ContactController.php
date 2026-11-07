@@ -1,9 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Tag;
+use App\Http\Requests\StoreContactRequest;
+use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
@@ -20,11 +21,58 @@ class ContactController extends Controller
         return view('contact.index', compact('categories', 'tags'));
 
     }
-
-    public function create()
+    // バリデーション・確認画面へリダイレクト
+    public function confirm(StoreContactRequest $request)
     {
-        // FormRequestで検証済みのデータを取得
+
+        // 検証済みの値を変数に代入する
         $validated = $request->validated();
-        // 確認画面で入力されたデータを表示するために、セッションに保存
+        //バリデーション済みデータをセッションに保存
+        $request->session()->put('contact_input', $request->validated());
+
+        return redirect()->route('contact.showConfirm');
     }
+
+    // 確認画面の表示
+    public function showConfirm(Request $request)
+    {
+        // セッションからデータを取得（なければ入力画面へ）
+        $validated = $request->session()->get('contact_input');
+        if (!$validated) {
+            return redirect()->route('contact.index');
+        }
+
+        //　カテゴリ名とタグ名を取得してビューに渡す
+        $category = Category::find($validated['category_id']);
+        // 複数選択を想定
+        $tags = isset($validated['tag_ids']) ? Tag::whereIn('id', $validated['tag_ids'])->get() : collect();
+
+        return view('contact.confirm', compact('validated', 'category', 'tags'));
+    }
+
+// 送信処理
+public function send(Request $request)
+    {
+        $validated = $request->session()->get('contact_input');
+        if ($validated) {
+            return redirect()->route('contact.thanks');
+        }
+        // 修正ボタンが押された時
+        if ($request->has('back')) {
+            //入力画面へ戻る
+            return redirect()->route('contact.index')->withInput($validated);
+        }
+
+        // セッションをクリア
+        $request->session()->forget('contact_input');
+        return redirect()->route('contact.thanks');
+
+    }
+    // 完了画面の表示
+    public function thanks()
+    {
+        return view('contact.thanks');
+    }
+
 }
+

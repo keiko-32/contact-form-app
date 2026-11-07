@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::get('/', [ContactController::class, 'index']);
+Route::get('/contacts', [ContactController::class, 'index'])->name('contact.index');
+Route::get('/contacts', [ContactController::class, 'showConfirm'])->name('contact.showConfirm');
+Route::post('/contacts/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
+Route::post('/contacts', [ContactController::class, 'send'])->name('contact.send');
+Route::get('/contacts/thanks', [ContactController::class, 'thanks'])->name('contact.thanks');
+
